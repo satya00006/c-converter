@@ -1,0 +1,128 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Gradient background */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 600px; /* Slightly wider */
+    margin: 2rem auto;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #2c3e50; /* Darker blue */
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.i1, .i2, .i3 {
+    margin: 1.2rem 0;
+    padding: 0.5rem 0;
+}
+
+.label {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+#fromcurrency, #tocurrency, #amount {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #dfe6e9;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#fromcurrency:focus, #tocurrency:focus, #amount:focus {
+    border-color: #0984e3; /* Vibrant blue */
+    box-shadow: 0 0 8px rgba(9, 132, 227, 0.4);
+    outline: none;
+}
+
+.button, .swap-button {
+    background-color: #0984e3;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0.5rem;
+}
+
+.button:hover, .swap-button:hover {
+    background-color: #0652dd;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.swap-button {
+    background-color: #636e72; /* Neutral gray for swap */
+}
+
+.swap-button:hover {
+    background-color: #2d3436;
+}
+
+.result-container {
+    margin-top: 2rem;
+    padding: 1.2rem;
+    border: 2px dashed #b2bec3;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    color: #2d3436;
+    background-color: #f1f2f6;
+    transition: all 0.3s ease;
+}
+
+.error {
+    color: #d63031; /* Red for errors */
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    color: #2d3436;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .button, .swap-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
