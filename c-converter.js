@@ -39,6 +39,3 @@ function swapCurrencies() {
 
 document.getElementById('convertbutton').addEventListener('click', convertCurrency);
 document.getElementById('swapbutton').addEventListener('click', swapCurrencies);
-document.getElementById('amount').addEventListener('input', convertCurrency);
-document.getElementById('fromcurrency').addEventListener('change', convertCurrency);
-document.getElementById('tocurrency').addEventListener('change', convertCurrency);
